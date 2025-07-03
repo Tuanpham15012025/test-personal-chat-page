@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Chat Page Mockup</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Chat Page - Mockup</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f9f9f9; }
-    header { background: #6A0DAD; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
-    header .logo { font-weight: bold; font-size: 20px; }
-    nav { margin-top: 10px; }
-    .container { display: flex; flex-wrap: wrap; }
-    .sidebar { width: 35%; min-width: 250px; background: #fff; padding: 10px; border-right: 1px solid #ddd; }
-    .content { flex: 1; padding: 10px; }
-    .tabs button { padding: 5px 10px; border: none; margin-right: 5px; cursor: pointer; }
-    .tabs .active { background: #6A0DAD; color: white; }
-    .qa-item { border-bottom: 1px solid #eee; padding: 5px 0; }
-    .qa-item span.tag { background: #eee; padding: 2px 5px; border-radius: 3px; margin-left: 5px; }
-    .actions { float: right; }
-    .actions button { border: none; background: none; cursor: pointer; }
-    .search { margin: 10px 0; }
-    input[type="text"] { width: 100%; padding: 5px; }
-    .qr { margin-top: 20px; text-align: center; }
-    .qr img { width: 150px; height: 150px; }
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+    header { background: #6A0DAD; color: #fff; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 20px; margin: 0; }
+    .container { padding: 20px; }
+    .tabs { display: flex; margin-bottom: 10px; }
+    .tab { padding: 8px 12px; border: 1px solid #6A0DAD; cursor: pointer; }
+    .tab.active { background: #6A0DAD; color: #fff; }
+    .tab:not(.active):hover { background: #eee; }
+    .search-box { margin-bottom: 10px; }
+    .search-box input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    .qa-item { background: #fff; padding: 10px; margin-bottom: 8px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .qa-item span.actions { float: right; }
+    .qa-item span.actions button { border: none; background: none; cursor: pointer; font-size: 16px; }
+    .buttons { margin: 10px 0; }
+    .buttons button { background: #6A0DAD; color: #fff; border: none; padding: 8px 12px; margin-right: 5px; border-radius: 4px; cursor: pointer; }
+    .buttons button:hover { background: #520a99; }
+    .qr-section { background: #fff; padding: 10px; border-radius: 4px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 10px; font-size: 12px; color: #777; }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">🌐 Personal Chat Page</div>
-    <div class="account">Pioneer: maxo23798d</div>
+    <h1>🌐 Personal Chat Page</h1>
+    <div>Pioneer: maxo23798d</div>
   </header>
-
   <div class="container">
-    <div class="sidebar">
-      <div class="search">
-        <input type="text" placeholder="Search your Q&A..."/>
-      </div>
-      <div class="tabs">
-        <button class="active">All</button>
-        <button>Questions</button>
-        <button>Answers</button>
-      </div>
-      <div class="qa-item">
-        📌 2025-06-22 | Q | <span class="tag">Node</span> | How do I set up a SuperNode?
-        <div class="actions">📝 ✏️ 🗑️</div>
-      </div>
-      <div class="qa-item">
-        📌 2025-06-21 | A | <span class="tag">Node</span> | You can request a Public IP from ISP.
-        <div class="actions">📝 ✏️ 🗑️</div>
-      </div>
-      <button style="margin-top:10px;">Add Question</button>
-      <button>Add Answer</button>
-
-      <div class="qr">
-        <p>Scan Testnet Wallet QR</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU" alt="Testnet Wallet QR" />
-        <p style="font-size:10px;">GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU</p>
-      </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search your Q&A...">
     </div>
 
-    <div class="content">
-      <h2>Details will show here when you click a Q&A</h2>
+    <div class="tabs">
+      <div class="tab active">All</div>
+      <div class="tab">Questions</div>
+      <div class="tab">Answers</div>
+    </div>
+
+    <div class="qa-item">
+      📌 2025-06-22 | <strong>Q</strong> | Node | How do I set up a SuperNode?
+      <span class="actions">📝 ✏️ 🗑️</span>
+    </div>
+
+    <div class="qa-item">
+      📌 2025-06-21 | <strong>A</strong> | Node | You can request a Public IP from ISP.
+      <span class="actions">📝 ✏️ 🗑️</span>
+    </div>
+
+    <div class="buttons">
+      <button>➕ Add Question</button>
+      <button>➕ Add Answer</button>
+    </div>
+
+    <div class="qr-section">
+      <p><strong>Testnet Wallet QR</strong></p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU" alt="Testnet Wallet QR">
+      <p style="word-wrap: break-word; font-size: 12px;">GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU</p>
+    </div>
+
+    <div style="margin-top:20px; background:#fff; padding:10px; border-radius:4px;">
+      <p><em>Details will show here when you click a Q&A</em></p>
     </div>
   </div>
+
+  <footer>
+    © 2025 Personal Chat Page — A Pi Network Hackathon Project
+  </footer>
 </body>
 </html>
