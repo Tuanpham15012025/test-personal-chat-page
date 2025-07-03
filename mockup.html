@@ -3,26 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Chat Page</title>
+  <title>Personal Chat Page Mockup</title>
   <style>
-    body {
-      background: #2e004f;
-      color: #ffd700;
-      font-family: sans-serif;
-      padding: 20px;
-    }
-    .tab { margin: 10px 0; }
-    .entry { border: 1px solid #ffd700; padding: 10px; margin: 5px 0; }
+    body { font-family: sans-serif; margin: 0; background: #f9f9f9; }
+    header { background: #6A0DAD; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    header .logo { font-weight: bold; font-size: 20px; }
+    nav { margin-top: 10px; }
+    .container { display: flex; flex-wrap: wrap; }
+    .sidebar { width: 35%; min-width: 250px; background: #fff; padding: 10px; border-right: 1px solid #ddd; }
+    .content { flex: 1; padding: 10px; }
+    .tabs button { padding: 5px 10px; border: none; margin-right: 5px; cursor: pointer; }
+    .tabs .active { background: #6A0DAD; color: white; }
+    .qa-item { border-bottom: 1px solid #eee; padding: 5px 0; }
+    .qa-item span.tag { background: #eee; padding: 2px 5px; border-radius: 3px; margin-left: 5px; }
+    .actions { float: right; }
+    .actions button { border: none; background: none; cursor: pointer; }
+    .search { margin: 10px 0; }
+    input[type="text"] { width: 100%; padding: 5px; }
+    .qr { margin-top: 20px; text-align: center; }
+    .qr img { width: 150px; height: 150px; }
   </style>
 </head>
 <body>
-  <h1>Personal Chat Page</h1>
-  <div class="tab">[All] [Questions] [Answers]</div>
-  <div class="entry">
-    📌 2025-06-22 | Q: How do I set up a SuperNode? (Tag: Node)
-  </div>
-  <div class="entry">
-    📌 2025-06-21 | A: You can request a Public IP from ISP. (Node)
+  <header>
+    <div class="logo">🌐 Personal Chat Page</div>
+    <div class="account">Pioneer: maxo23798d</div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="search">
+        <input type="text" placeholder="Search your Q&A..."/>
+      </div>
+      <div class="tabs">
+        <button class="active">All</button>
+        <button>Questions</button>
+        <button>Answers</button>
+      </div>
+      <div class="qa-item">
+        📌 2025-06-22 | Q | <span class="tag">Node</span> | How do I set up a SuperNode?
+        <div class="actions">📝 ✏️ 🗑️</div>
+      </div>
+      <div class="qa-item">
+        📌 2025-06-21 | A | <span class="tag">Node</span> | You can request a Public IP from ISP.
+        <div class="actions">📝 ✏️ 🗑️</div>
+      </div>
+      <button style="margin-top:10px;">Add Question</button>
+      <button>Add Answer</button>
+
+      <div class="qr">
+        <p>Scan Testnet Wallet QR</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU" alt="Testnet Wallet QR" />
+        <p style="font-size:10px;">GAQPBA6C3KUBAUBXZUCJTD3547KYHFYCRHGCR5MXTIOXNLEGOCOZHKCU</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Details will show here when you click a Q&A</h2>
+    </div>
   </div>
 </body>
 </html>
